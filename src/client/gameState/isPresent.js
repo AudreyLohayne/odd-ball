@@ -7,3 +7,23 @@
  *  - retornar true se sim, false se não.
  * @export isPresent
  */
+
+ import {getPlayers} from './index.js'
+
+
+
+ function isPresent (id){
+
+    let vetorPlayers = getPlayers()
+
+    for(let i= 0 ; i < vetorPlayers.length ; i++){
+        if(vetorPlayers[i].id == id){
+            return true
+        }
+        
+    }
+    return false
+
+ }
+
+ export default isPresent
